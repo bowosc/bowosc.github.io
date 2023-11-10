@@ -15,6 +15,10 @@
       }
     </style>
   </head>
+<p>
+  blorgus
+</p>
+
   <body>
     <canvas id="myCanvas" width="480" height="320"></canvas>
 
@@ -36,7 +40,7 @@
         ctx.fillStyle = "#0095DD";
 
         if (bouncecolor == "1") {
-          ctx.fillStyle = 'hsl(' + 360 * Math.random() + ', 50%, 50%)';
+          ctx.fillStyle = getRandomColor();
           bouncecolor = "0";
         }
 
