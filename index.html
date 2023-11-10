@@ -38,9 +38,9 @@
         ctx.beginPath();
         ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
         ctx.fillStyle = "#0095DD";
-
+        var randcolor = getRandomColor();
         if (bouncecolor == "1") {
-          ctx.fillStyle = getRandomColor();
+          ctx.fillStyle = randcolr;
           bouncecolor = "0";
         }
 
