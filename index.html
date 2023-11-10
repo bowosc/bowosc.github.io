@@ -16,7 +16,7 @@
     </style>
   </head>
 <p>
-  blorgus
+  b
 </p>
 
   <body>
@@ -30,20 +30,14 @@
       let y = canvas.height - 30;
       let dx = 2;
       let dy = -2;
-      let bouncecolor = "0";
       const ballRadius = 10;
+
 
 
       function drawBall() {
         ctx.beginPath();
         ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
         ctx.fillStyle = "#0095DD";
-        var randcolor = getRandomColor();
-        if (bouncecolor == "1") {
-          ctx.fillStyle = randcolr;
-          bouncecolor = "0";
-        }
-
         ctx.fill();
         ctx.closePath();
       }
@@ -57,11 +51,9 @@
         //bouncin' off the walls
         if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
           dx = -dx;
-          bouncecolor = "1";
         }
         if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
           dy = -dy;
-          bouncecolor = "1";
         }
 
       }
