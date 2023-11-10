@@ -26,13 +26,20 @@
       let y = canvas.height - 30;
       let dx = 2;
       let dy = -2;
+      let bouncecolor = False
       const ballRadius = 10;
 
 
       function drawBall() {
         ctx.beginPath();
         ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-        ctx.fillStyle = "#0095DD";
+
+        if (bouncecolor = True) {
+          ctx.fillStyle = 'hsl(' + 360 * Math.random() + ', 50%, 50%)';
+        } else {
+          ctx.fillStyle = "#0095DD";
+        }
+        
         ctx.fill();
         ctx.closePath();
       }
@@ -44,13 +51,13 @@
         y += dy;
 
         //bouncin' off the walls
-        if (x + dx > canvas.width || x + dx < 0) {
+        if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
           dx = -dx;
         }
-
-        if (y + dy > canvas.height || y + dy < 0) {
+        if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
           dy = -dy;
         }
+
       }
       setInterval(draw,10);
 
