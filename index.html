@@ -36,10 +36,10 @@
 
         if (bouncecolor = True) {
           ctx.fillStyle = 'hsl(' + 360 * Math.random() + ', 50%, 50%)';
+          bouncecolor = False
         }
-        if (bouncecolor = False) {
-          ctx.fillStyle = "#0095DD";
-        }
+        
+        ctx.fillStyle = "#0095DD"
 
         ctx.fill();
         ctx.closePath();
