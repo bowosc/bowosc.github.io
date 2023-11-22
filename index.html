@@ -76,6 +76,9 @@
         if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
           dy = -dy;
         }
+        if (y + dy > canvas.height - paddleHeight - ballRadius && x + dx == canvas.width - paddleWidth || y + dy < ballRadius) {
+          dy = -dy;
+        }
       
 
         if (rightPressed) {
