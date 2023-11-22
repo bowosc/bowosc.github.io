@@ -73,10 +73,7 @@
           dy = -dy;
         }
         
-        //this thing delete it
-        points = (points + 1);
-
-        if (x > canvas.width - 20) {
+        if (x + dx > canvas.height - ballRadius) {
           ballRadius = (ballRadius - 1);
           points = (points - 1);
         }
