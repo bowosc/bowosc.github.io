@@ -61,7 +61,7 @@
         drawBall();
         drawPaddle();
         ctx.font = "26px serif";
-        ctx.fillText(("Points: "+ points), 10, 10);
+        ctx.fillText(("Points: "+ points), 10, 24);
         x += dx;
         y += dy;
 
@@ -73,6 +73,9 @@
           dy = -dy;
         }
         
+        //this thing delete it
+        points = (points + 1);
+
         if (x > canvas.width - 20) {
           ballRadius = (ballRadius - 1);
           points = (points - 1);
