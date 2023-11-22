@@ -15,9 +15,6 @@
       }
     </style>
   </head>
-<p>
-  b
-</p>
 
   <body>
     <canvas id="myCanvas" width="480" height="320"></canvas>
@@ -31,6 +28,8 @@
       let dx = 2;
       let dy = -2;
       const ballRadius = 10;
+
+      let points = 10
 
       const paddleHeight = 10;
       const paddleWidth = 75;
@@ -61,6 +60,8 @@
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawBall();
         drawPaddle();
+        ctx.font = "48px serif";
+        ctx.fillText(("points > "+ points), 10, 50);
         x += dx;
         y += dy;
 
@@ -72,6 +73,11 @@
           dy = -dy;
         }
         
+        if (x + dx > canvas.width - ballRadius) {
+          ballRadius = (ballRadius - 1);
+          points = (points - 1);
+        }
+
         if (rightPressed) {
           paddleX = Math.min(paddleX + 7, canvas.width - paddleWidth);
         } else if (leftPressed) {
