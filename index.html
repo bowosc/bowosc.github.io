@@ -64,6 +64,11 @@
         ctx.fillText(("Points: "+ points), 10, 24);
         x += dx;
         y += dy;
+        
+        if (y + dy > canvas.height - ballRadius) {
+          ballRadius = (ballRadius - 1);
+          points = (points - 1);
+        }
 
         //bouncin' off the walls
         if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
@@ -72,11 +77,7 @@
         if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
           dy = -dy;
         }
-        
-        if (x + dx > canvas.height - ballRadius) {
-          ballRadius = (ballRadius - 1);
-          points = (points - 1);
-        }
+      
 
         if (rightPressed) {
           paddleX = Math.min(paddleX + 7, canvas.width - paddleWidth);
