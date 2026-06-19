@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact page for Bowie's example GitHub Pages site.">
+    <title>Contact | Bowie's GitHub Pages</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Bowie home">
+        <span class="brand-mark">B</span>
+        <span>Bowie</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro compact">
+        <p class="eyebrow">Contact</p>
+        <h1>Make it easy for visitors to reach you</h1>
+        <p>Use this page for an email link, social profiles, or a short static contact form.</p>
+      </section>
+
+      <section class="section contact-layout">
+        <div class="contact-panel">
+          <h2>Connect</h2>
+          <p>Swap these placeholders with your own preferred links before publishing widely.</p>
+          <ul class="contact-list">
+            <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li><a href="https://github.com/bowosc">github.com/bowosc</a></li>
+            <li><a href="projects.html">Project examples</a></li>
+          </ul>
+        </div>
+
+        <form class="contact-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6"></textarea>
+
+          <button class="button primary" type="submit">Open Email Draft</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Bowie. Built for GitHub Pages.</p>
+      <a href="contact.html">Get in touch</a>
+    </footer>
+  </body>
+</html>
