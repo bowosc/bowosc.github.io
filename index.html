@@ -2,29 +2,143 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Website</title>
-    <style>
-      :root { --ink: #18201b; --muted: #6b7280; --bg: #ffffff; }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-        color: var(--ink);
-        background: var(--bg);
-        line-height: 1.6;
-      }
-      nav { padding: 24px 32px; font-weight: 700; }
-      main { max-width: 680px; margin: 0 auto; padding: 8vh 24px; }
-      h1 { font-size: 2.4rem; margin: 0 0 16px; }
-      p { color: var(--muted); font-size: 1.1rem; }
-    </style>
+    <meta name="description" content="A clean, minimal personal portfolio.">
+    <title>Cleanfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
-    <nav><span></span></nav>
-    <main>
-      <h1>Nothing to see here.</h1>
-      <p><a href="https://bowmanedebohls.com">actual website</a></p>
-    </main>
+    <div class="app light" id="top">
+      <header class="header center">
+        <h3><a href="#top" class="link">YN.</a></h3>
+        <nav class="center nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li class="nav__list-item"><a href="#about" class="link link--nav">About</a></li>
+            <li class="nav__list-item"><a href="#projects" class="link link--nav">Projects</a></li>
+            <li class="nav__list-item"><a href="#skills" class="link link--nav">Skills</a></li>
+            <li class="nav__list-item"><a href="#contact" class="link link--nav">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="about center" id="about">
+          <div class="about__header">
+            <img src="assets/img/avatar.svg" alt="name title" class="about__picture">
+            <div class="about__intro">
+              <h1>Bowman Edebohls</h1>
+              <h2 class="about__role">I'm a website.</h2>
+              <p class="about__desc">
+                Have fun with the website! Try the AI assistant, it's really useful. 
+                You can double-click the tab name to change it. See the settings gear to add a custom domain (yourname.com).
+
+              </p>
+            </div>
+          </div>
+
+          <div class="about__contact center">
+            <a href="http://localhost:3000/default-link"><span class="btn btn--outline">Resume</span></a>
+            <a href="http://localhost:3000/default-link" aria-label="github" class="link link--icon">
+              <img src="assets/img/github.svg" alt="GitHub" class="icon">
+            </a>
+            <a href="http://localhost:3000/default-link" aria-label="linkedin" class="link link--icon">
+              <img src="assets/img/linkedin.svg" alt="LinkedIn" class="icon">
+            </a>
+          </div>
+        </div>
+
+        <section id="projects" class="section projects">
+          <h2 class="section__title">Projects</h2>
+
+          <div class="projects__grid">
+            <div class="project">
+              <img src="assets/img/project.svg" alt="Project 1 screenshot" style="width: 100%; object-fit: cover">
+              <h3>Project 1</h3>
+              <p class="project__description">
+                Amet asperiores et impedit aliquam consectetur. Voluptates sed a nulla ipsa
+                officia et esse aliquam.
+              </p>
+              <ul class="project__stack">
+                <li class="project__stack-item">SASS</li>
+                <li class="project__stack-item">TypeScript</li>
+                <li class="project__stack-item">React</li>
+              </ul>
+              <a href="http://localhost:3000/default-link" aria-label="source code" class="link link--icon">
+                <img src="assets/img/github.svg" alt="Source code" class="icon">
+              </a>
+              <a href="http://localhost:3000/default-link" aria-label="live preview" class="link link--icon">
+                <img src="assets/img/external.svg" alt="Live preview" class="icon">
+              </a>
+            </div>
+
+            <div class="project">
+              <img src="assets/img/project.svg" alt="Project 2 screenshot" style="width: 100%; object-fit: cover">
+              <h3>Project 2</h3>
+              <p class="project__description">
+                You can add more tags below by pressing enter while editing a tag. Same with the skills in the next section.
+              </p>
+              <ul class="project__stack">
+                <li class="project__stack-item">SASS</li>
+                <li class="project__stack-item">TypeScript</li>
+                <li class="project__stack-item">React</li>
+              </ul>
+              <a href="http://localhost:3000/default-link" aria-label="source code" class="link link--icon">
+                <img src="assets/img/github.svg" alt="Source code" class="icon">
+              </a>
+              <a href="http://localhost:3000/default-link" aria-label="live preview" class="link link--icon">
+                <img src="assets/img/external.svg" alt="Live preview" class="icon">
+              </a>
+            </div>
+
+            <div class="project">
+              <img src="assets/img/project.svg" alt="Project 3 screenshot" style="width: 100%; object-fit: cover">
+              <h3>Project 3</h3>
+              <p class="project__description">
+                Amet asperiores et impedit aliquam consectetur. Voluptates sed a nulla ipsa
+                officia et esse aliquam.
+              </p>
+              <ul class="project__stack">
+                <li class="project__stack-item">SASS</li>
+                <li class="project__stack-item">TypeScript</li>
+                <li class="project__stack-item">React</li>
+              </ul>
+              <a href="http://localhost:3000/default-link" aria-label="source code" class="link link--icon">
+                <img src="assets/img/github.svg" alt="Source code" class="icon">
+              </a>
+              <a href="http://localhost:3000/default-link" aria-label="live preview" class="link link--icon">
+                <img src="assets/img/external.svg" alt="Live preview" class="icon">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section skills" id="skills">
+          <h2 class="section__title">Skills</h2>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">HTML</li>
+            <li class="skills__list-item btn btn--plain">CSS</li>
+            <li class="skills__list-item btn btn--plain">JavaScript</li>
+            <li class="skills__list-item btn btn--plain">TypeScript</li>
+            <li class="skills__list-item btn btn--plain">React</li>
+            <li class="skills__list-item btn btn--plain">Redux</li>
+            <li class="skills__list-item btn btn--plain">SASS</li>
+            <li class="skills__list-item btn btn--plain">Git</li>
+          </ul>
+        </section>
+
+        <section class="section contact center" id="contact">
+          <h2 class="section__title">Contact</h2>
+          <a href="mailto:johnsmith@mail.com"><span class="btn btn--outline">Email me</span></a>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <a href="https://github.com/rjshkhr/cleanfolio" class="link footer__link">Built with Cleanfolio</a>
+      </footer>
+    </div>
   
 
 </body></html>
